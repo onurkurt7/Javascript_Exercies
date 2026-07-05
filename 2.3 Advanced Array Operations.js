@@ -2,8 +2,10 @@ const finallerdekiGolSayilari = (data) => {
   const depo = {}
   const finaller = data.filter( (mac) => mac["Stage"] == "Final")
   finaller.forEach( (mac, index) =>{
+    
     const evSahibi = mac["Home Team Name"]
     const konukTakim = mac["Away Team Name"]
+
     if(depo[evSahibi] === undefined){
       depo[evSahibi] = mac["Home Team Goals"]
     } else {
